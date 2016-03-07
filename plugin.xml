@@ -243,8 +243,9 @@
 
     <!-- windows -->
     <platform name="windows">
-        <config-file target="package.appxmanifest" parent="/Package/Capabilities">
+        <config-file target="package.appxmanifest" parent="/Package/Capabilities" xmlns:uap="http://ignore.com/uap" >
             <DeviceCapability Name="webcam" />
+            <uap:Capability Name="picturesLibrary"/>
         </config-file>
         <js-module src="www/CameraPopoverHandle.js" name="CameraPopoverHandle">
             <clobbers target="CameraPopoverHandle" />
